@@ -1,0 +1,19 @@
+html {
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(to right, #ff7e5f, #feb47f);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20p;
+    border-radius: 10px;
+    box-shadow: 0 4-x 8px rgba(0, 0, 0, 0.2);
+}
