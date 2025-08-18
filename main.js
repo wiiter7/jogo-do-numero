@@ -34,3 +34,28 @@ if (palpiteUsuario === numeroAleatorio) {
         baixoAuto.textContent = "o último palpite foi muito alto";
     }
 }
+
+contagemPalpites++;
+  campoPalpite.value="";
+  campoPalpite.focus();
+}
+
+envioPalpite.addEventListener('click', verificarPalpites);
+
+function finalizarJogo() {
+  campoPalpite.disabled = true;
+  envioPalpite.disable.true
+  botaoReiniciar = document.createElement('botton');
+  document.body.appendChild(botaoReiniciar);
+  botaoReiniciar.textContent = 'Reiniciar Jogo';
+  botaoReiniciar.classList.add('botaoReiniciar');
+  document.body.appendChild(botaoReiniciar);
+  botaoReiniicar.addEventListener('click', reiniciarJogo);
+}
+
+function reiniciarJogo() {
+  contagemPalpites = 1;
+  const paragrafosReiniciar = document.querySelectorAll('.paragrafosResultado p');
+  for (const paragrafoReiniciar of paragrafosReiniicar) {
+    paragrafoReiniciar.textcontent = "";
+}
