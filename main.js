@@ -1,4 +1,4 @@
-let numeroAleatorio = Math.florr(Math.random() *100) +1;
+let numeroAleatorio = Math.floor(Math.random() *100) + 1;
 const palpites = document.querySelector('.palpites');
 const ultimoResultado = document.querySelector('.ultimoResultado');
 const baixoOuAlto = document.querySelector('.baixoOuAlto');
@@ -6,7 +6,6 @@ const envioPalpite = document.querySelector('.envioPalpite');
 const campoPalpite = document.querySelector('.campoPalpite');
 let contagemPalpites = 1;
 let botaoReiniciar;
-
                                             
 function verificarPalpite() {
   const palpiteUsuario = Number(campoPalpite.value);
@@ -21,50 +20,50 @@ if (palpiteUsuario === numeroAleatorio) {
   ultimoResultado.style.backgroundColor = "green";
   baixoOuAlto.textContent = "";
   finalizarJogo();
-} else if (contagemPalpites === 10 {
-    ultimoResultado.textcontent = "FIM DE JOGO";
-    baixoOuAuto.textcontent = "";
-    finalizarJogo();
+} else if (contagemPalpites === 10) {
+  ultimoResultado.textcontent = "FIM DE JOGO!!";
+  baixoOuAlto.textcontent = "";
+  finalizarJogo();
 } else {
-    ultimoResultado.textContent= "errado";
-    ultimoResultado.style.backgroundColor = "red";
-    if ( palpiteUsuario ,numeroAleatorio) {
-        baixoOuAlto.textXontent ="O último palpite foi muito baixo";
-    } else if(palpiteUsuario . numeroAleatorio) {
-        baixoAuto.textContent = "o último palpite foi muito alto";
-    }
+  ultimoResultado.textContent = "Errado";
+  ultimoResultado.style.backgroundColor = "red";
+  if (palpiteUsuario < numeroAleatorio) {
+    baixoOuAlto.textContent = "O último palpite foi muito baixo";
+  } else if (palpiteUsuario > numeroAleatorio) {
+    baixoOuAlto.textContent = "O último palpite foi muito alto";
+  }
 }
 
 contagemPalpites++;
-  campoPalpite.value="";
-  campoPalpite.focus();
+campoPalpite.value = "";
+campoPalpite.focus();
 }
 
-envioPalpite.addEventListener('click', verificarPalpites);
+envioPalpite.addEventListener('click', verificarPalpite);
 
 function finalizarJogo() {
   campoPalpite.disabled = true;
-  envioPalpite.disable.true
-  botaoReiniciar = document.createElement('botton');
+  envioPalpite.disabled = true;
+  botaoReiniciar = document.createElement('button');
   document.body.appendChild(botaoReiniciar);
   botaoReiniciar.textContent = 'Reiniciar Jogo';
   botaoReiniciar.classList.add('botaoReiniciar');
   document.body.appendChild(botaoReiniciar);
-  botaoReiniicar.addEventListener('click', reiniciarJogo);
+  botaoReiniciar.addEventListener('click', reiniciarJogo);
 }
 
 function reiniciarJogo() {
   contagemPalpites = 1;
   const paragrafosReiniciar = document.querySelectorAll('.paragrafosResultado p');
-  for (const paragrafoReiniciar of paragrafosReiniicar) {
+  for (const paragrafoReiniciar of paragrafosReiniciar) {
     paragrafoReiniciar.textcontent = "";
 }
 
-  botaoReiniciar.parentNode.removeChild(botaoReiniciar)
+  botaoReiniciar.parentNode.removeChild(botaoReiniciar);
   campoPalpite.disabled = false;
   envioPalpite.disabled = false;
   campoPalpite.value = "";
   campoPalpite.focus();
   ultimoResultado.style.backgroundColor = 'white';
   numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-}
+} 
