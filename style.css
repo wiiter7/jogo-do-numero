@@ -89,3 +89,7 @@ h1 {
     cursor: pointer;
     transitions: background-color 0.3s ease;
 }    
+
+.botaoReiniciar:hover {
+background-color: #0056b3;
+}    
